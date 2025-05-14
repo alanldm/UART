@@ -19,7 +19,7 @@ end UART_controller;
 
 architecture Behavioral of UART_controller is
     type FSM is (load, sync, send, stop, idle);
-    signal current_state : FSM;
+    signal current_state : FSM := idle;
     signal next_state : FSM;
 
     begin
